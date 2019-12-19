@@ -6,6 +6,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    //
     path: '/',
     redirect: '/home'
   },
@@ -15,6 +16,7 @@ const routes = [
     name: 'home',
     component: Home
   }, {
+    // 登陆页
     path: '/login',
     component: Login
   }
