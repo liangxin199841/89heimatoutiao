@@ -66,10 +66,20 @@ export default {
     // 提交登陆表单
     submitLogin () {
       // el-form实例
-      this.$refs.myForm.validate(function (isOK) {
+      this.$refs.myForm.validate((isOK) => {
         if (isOK) {
           // 认为前端校验登录表单成功
-          console.log('前端校验成功，发送用户名和密码到后台去校验')
+          // 地址参数  查询参数  params对象
+          // body参数 data对象
+          this.$axios({
+            url: '/authorizations',
+            method: 'post',
+            data: this.loginForm
+          }).then(result => {
+            console.log(result)
+          }).catch(error => {
+            console.log(error)
+          })
         }
       })
     }
