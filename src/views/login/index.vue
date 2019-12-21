@@ -72,11 +72,12 @@ export default {
           // 地址参数  查询参数  params对象
           // body参数 data对象
           this.$axios({
-            url: '/authorizations',
+            url: '/authorizations', // 请求地址
             method: 'post',
             data: this.loginForm
           }).then(result => {
-            console.log(result)
+            window.localStorage.setItem('user-token', result.data.data.token)// 前端缓存令牌
+            // 成功以后才会进入到then
           }).catch(error => {
             console.log(error)
           })
