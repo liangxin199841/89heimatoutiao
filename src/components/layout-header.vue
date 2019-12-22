@@ -10,7 +10,7 @@
     <!-- 右侧 -->
     <el-col class="right" :span="4">
       <el-row type="flex" justify="ned" align="middle">
-        <img src="../assets/img/fds.jpg" alt />
+        <img src="../assets/img/avatar.jpg" alt />
         <!-- 下拉菜单 -->
         <el-dropdown>
           <span>反动神</span>
