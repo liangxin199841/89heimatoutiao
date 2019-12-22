@@ -81,6 +81,7 @@ export default {
             // 成功以后才会进入到then
           }).catch(() => {
             this.$message({
+              // elementUI的方法
               message: '您的手机号或者验证码不正确',
               type: 'warning'
             })
